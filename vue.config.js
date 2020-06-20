@@ -24,7 +24,8 @@ module.exports = {
     //开发环境host(类型:string)
     host: process.env.VUE_APP_HOST,
     //开发环境port(类型:number)
-    port: process.env.VUE_APP_PORT,
+    // port: process.env.VUE_APP_PORT,
+    port: '60010',
     //对外访问地址，需配置nginx(类型:string)
     //de: process.env.VUE_APP_PUBLIC_URL,
     //是否开启host检测(类型:boolean)
