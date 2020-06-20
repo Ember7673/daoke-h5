@@ -44,7 +44,7 @@
             />
             <input
               type="file"
-              accept=".jpg,.jpeg,.png"
+              accept="image/*"
               @change.self="onUploadFile('fa_piao_pic', formIndex)"
             />
           </el-form-item>
@@ -60,7 +60,7 @@
             />
             <input
               type="file"
-              accept=".jpg,.jpeg,.png"
+              accept="image/*"
               @change.self="onUploadFile('ming_xi_pic', formIndex)"
             />
           </el-form-item>

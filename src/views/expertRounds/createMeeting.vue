@@ -93,7 +93,7 @@
             <input
               class="uploadInvitation"
               type="file"
-              accept=".doc,.format,.to_pdf,.pdf,.txt,.doc,.docx,.xls,.xlsx,.ppt,.pdf,.png,.jpg,.jpeg"
+              accept="image/*,*.pdf,*.word,*.docx,*.txt,*.ppt,*.doc"
               @change="onUploadInvitation($event)"
             />
             <p>{{ form.invitation_letter_name }}</p>

@@ -36,7 +36,7 @@
       </el-form-item>
       <el-form-item label="上传名片">
         <template>
-          <input class="filesUpload" type="file" title=" " @change="onFilesUpload($event)" />
+          <input class="filesUpload" type="file" title=" " accept="image/*" @change="onFilesUpload($event)" />
           <i v-if="!uploadCover" class="el-icon-picture-outline"></i>
           <img v-else :src="uploadCover" alt="" height="50">
         </template>

@@ -27,12 +27,12 @@
         <el-form-item label="劳务确认单">
           <i v-show="!imageList[formIndex].confirm" class="el-icon-picture-outline"></i>
           <img v-show="imageList[formIndex].confirm" :src="imageList[formIndex].confirm" alt="">
-          <input type="file" accept=".jpg,.jpeg,.png" @change.self="onUploadFile('confirm', formIndex)">
+          <input type="file" accept="image/*" @change.self="onUploadFile('confirm', formIndex)">
         </el-form-item>
         <el-form-item label="身份证正面">
           <i v-show="!imageList[formIndex].id_card" class="el-icon-picture-outline"></i>
           <img v-show="imageList[formIndex].id_card" :src="imageList[formIndex].id_card" alt="">
-          <input type="file" accept=".jpg,.jpeg,.png" @change.self="onUploadFile('id_card', formIndex)">
+          <input type="file" accept="image/*" @change.self="onUploadFile('id_card', formIndex)">
         </el-form-item>
         <el-form-item label="身份证号">
           <el-input v-model="form.id_num" placeholder="请输入身份证号"></el-input>
@@ -40,7 +40,7 @@
         <el-form-item label="银行卡正面">
           <i v-show="!imageList[formIndex].bank_card" class="el-icon-picture-outline"></i>
           <img v-show="imageList[formIndex].bank_card" :src="imageList[formIndex].bank_card" alt="">
-          <input type="file" accept=".jpg,.jpeg,.png" @change.self="onUploadFile('bank_card', formIndex)">
+          <input type="file" accept="image/*" @change.self="onUploadFile('bank_card', formIndex)">
         </el-form-item>
         <el-form-item label="银行卡号">
           <el-input v-model="form.bank_num" placeholder="请输入银行卡号"></el-input>
