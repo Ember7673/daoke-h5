@@ -1,4 +1,3 @@
-import home from '@/views/home';
 import login from '@/views/login';
 import expert from '@/views/expertRounds';
 import createMeeting from '@/views/expertRounds/createMeeting';
@@ -9,31 +8,31 @@ import register from '@/views/login/register';
 const routes = [
     {
         path: '/',
-        component: home,
+        component: resolve=>(require(["@/views/home"],resolve)),
     },
     {
       path: '/login',
-      component: login,
+      component: resolve=>(require(["@/views/login"],resolve)),
     },
     {
       path: '/register',
-      component: register,
+      component: resolve=>(require(["@/views/login/register"],resolve)),
     },
     {
       path: '/expert',
-      component: expert,
+      component: resolve=>(require(["@/views/expertRounds"],resolve)),
     },
     {
       path: '/createMeeting',
-      component: createMeeting,
+      component: resolve=>(require(["@/views/expertRounds/createMeeting"],resolve)),
     },
     {
       path: '/meetingInfo',
-      component: meetingInfo,
+      component: resolve=>(require(["@/views/expertRounds/meetingInfo"],resolve)),
     },
     {
       path: '/meetingMaterial',
-      component: meetingMaterial
+      component: resolve=>(require(["@/views/expertRounds/meetingMaterial"],resolve))
     }
   ]
 

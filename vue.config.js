@@ -1,3 +1,5 @@
+const CompressionPlugin = require('compression-webpack-plugin');
+const productionGzipExtensions = /\.(js|css|json|txt|html|ico|svg)(\?.*)?$/i;
 const { publicPath, outputDir, assetsDir, title } = require('./setting');
 const path = require('path');
 const resolve = (dir) => {
@@ -37,7 +39,7 @@ module.exports = {
   },
   //alias等配置
   configureWebpack: {
-    name: title || 'Vue Admin Template',
+    name: title || '稻壳汇',
     resolve: {
       alias: {
         '@styles': resolve('src/assets/styles'),
@@ -77,5 +79,17 @@ module.exports = {
         return options;
       })
       .end();
+
+    if (process.env.NODE_ENV === 'production') {
+        config.plugin('compressionPlugin')
+        .use(new CompressionPlugin({
+            filename: '[path].gz[query]',
+            algorithm: 'gzip',
+            test: productionGzipExtensions,
+            threshold: 10240,
+            minRatio: 0.8,
+            deleteOriginalAssets: true
+        }));
+    }
   }
 };
