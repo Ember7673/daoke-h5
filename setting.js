@@ -2,7 +2,7 @@ const settings = {
   //项目名称
   title: '稻壳汇',
   //生产环境二级路径
-  publicPath: '/',
+  publicPath: './',
   //生产环境构建文件目录
   outputDir: 'webApp',
   //静态资源放置目录

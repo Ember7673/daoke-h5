@@ -1,5 +1,5 @@
-const CompressionPlugin = require('compression-webpack-plugin');
-const productionGzipExtensions = /\.(js|css|json|txt|html|ico|svg)(\?.*)?$/i;
+// const CompressionPlugin = require('compression-webpack-plugin');
+// const productionGzipExtensions = /\.(js|css|json|txt|html|ico|svg)(\?.*)?$/i;
 const { publicPath, outputDir, assetsDir, title } = require('./setting');
 const path = require('path');
 const resolve = (dir) => {
@@ -9,7 +9,8 @@ const resolve = (dir) => {
 module.exports = {
   lintOnSave: process.env.NODE_ENV === 'development',
   //是否开启sourceMap
-  productionSourceMap: process.env.NODE_ENV === 'production',
+  // productionSourceMap: process.env.NODE_ENV === 'production',
+  productionSourceMap: false,
   //生产环境二级路径
   publicPath: publicPath,
   //生产环境构建文件目录
@@ -80,16 +81,16 @@ module.exports = {
       })
       .end();
 
-    if (process.env.NODE_ENV === 'production') {
-        config.plugin('compressionPlugin')
-        .use(new CompressionPlugin({
-            filename: '[path].gz[query]',
-            algorithm: 'gzip',
-            test: productionGzipExtensions,
-            threshold: 10240,
-            minRatio: 0.8,
-            deleteOriginalAssets: true
-        }));
-    }
+    // if (process.env.NODE_ENV === 'production') {
+    //     config.plugin('compressionPlugin')
+    //     .use(new CompressionPlugin({
+    //         filename: '[path].gz[query]',
+    //         algorithm: 'gzip',
+    //         test: productionGzipExtensions,
+    //         threshold: 10240,
+    //         minRatio: 0.8,
+    //         deleteOriginalAssets: true
+    //     }));
+    // }
   }
 };
