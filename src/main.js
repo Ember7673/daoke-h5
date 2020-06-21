@@ -15,7 +15,7 @@ NProgress.configure({ showSpinner: false })
 Vue.config.productionTip = false
 const router = new VueRouter({
   routes: Routes,
-  mode: "history"
+  mode: "hash"
 })
 
 //路由守卫
