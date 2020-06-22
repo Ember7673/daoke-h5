@@ -23,17 +23,19 @@ router.beforeEach(async (to, from, next) => {
   // 开始页面加载进度条
   NProgress.start()
   // 通过cookie判断用户是否登录
-  const loginType = getCookie('loginType')
-  if (!loginType) {
+  const userInfo = getCookie('userInfo')
+  if (!userInfo) {
     // 判断是否去login页面,不然会陷入死循环
-    if (to.path !== "/login") {
+    if (to.path !== "/login" && to.path !== '/register') {
       next({ path: '/login' })
+    } else if (to.path === "/register") {
+      next()
     } else {
       next()
     }
   } else {
     // 在已经登录的情况下，如果访问登录页面则直接跳转到系统首页
-    if (to.path === '/Login') {
+    if (to.path === '/login') {
       next({ path: '/home', replace: true })
       NProgress.done()
     }

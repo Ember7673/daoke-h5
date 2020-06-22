@@ -176,7 +176,7 @@ export default {
   position: relative;
   margin: 0 auto;
   h5 {
-    margin-top: 50%;
+    margin-top: 20%;
     text-align: center;
     font-size: 30px;
   }
