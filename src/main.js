@@ -28,15 +28,13 @@ router.beforeEach(async (to, from, next) => {
     // 判断是否去login页面,不然会陷入死循环
     if (to.path !== "/login" && to.path !== '/register') {
       next({ path: '/login' })
-    } else if (to.path === "/register") {
-      next()
-    } else {
+    }else {
       next()
     }
   } else {
     // 在已经登录的情况下，如果访问登录页面则直接跳转到系统首页
     if (to.path === '/login') {
-      next({ path: '/home', replace: true })
+      next({ path: '/', replace: true })
       NProgress.done()
     }
     next()
