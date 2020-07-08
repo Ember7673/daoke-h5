@@ -4,7 +4,7 @@ const settings = {
   //生产环境二级路径
   publicPath: './',
   //生产环境构建文件目录
-  outputDir: 'webApp',
+  outputDir: 'h5',
   //静态资源放置目录
   assetsDir: 'static',
   //是否开启标签页

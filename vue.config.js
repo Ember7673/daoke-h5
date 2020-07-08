@@ -12,7 +12,7 @@ module.exports = {
   // productionSourceMap: process.env.NODE_ENV === 'production',
   productionSourceMap: false,
   //生产环境二级路径
-  publicPath: publicPath,
+  publicPath: '/h5',
   //生产环境构建文件目录
   outputDir: outputDir,
   //静态资源放置目录
