@@ -18,7 +18,7 @@
     "http-server": "^0.12.3",
     "js-base64": "^2.5.2",
     "js-cookie": "^2.2.1",
-    "node-sass": "^4.14.0",
+    "node-sass": "^7.0.0",
     "normalize.css": "^8.0.1",
     "nprogress": "^0.2.0",
     "screenfull": "^5.0.2",
